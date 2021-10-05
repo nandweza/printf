@@ -1,13 +1,16 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-int _puts(char *str);
-int _putchar(char c);
-char *convert(unsigned int num, int base, int lowercase);
 int _printf(const char *format, ...);
-int (*get_print(char s))(va_list, _flags *);
+int _putchar(char c);
+char* _itoa(int value, char* buffer, int base);
+int _strlen(char* str);
+int putstr(char* str);
 
 #endif
