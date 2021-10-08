@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * convert - converts numbers and base into strings
- * @num: number to input
- * @base: base to input
+ * convert - converts number and base into string
+ * @num: input number
+ * @base: input base
  * @lowercase: flag if hexa values need to be lowercase
- * Return: resulting string
+ * Return: result string
  */
-char *convert(unsigned int num, int base, int lowercase)
+char *convert(unsigned long int num, int base, int lowercase)
 {
 	static char *rep;
 	static char buffer[50];
@@ -15,16 +15,13 @@ char *convert(unsigned int num, int base, int lowercase)
 
 	rep = (lowercase)
 		? "0123456789abcdef"
-		? "0123456789ABCDEF";
+		: "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
-
-	do
-	{
+	do {
 		*--ptr = rep[num % base];
 		num /= base;
-	}
-	while (num != 0);
+	} while (num != 0);
 
 	return (ptr);
 }

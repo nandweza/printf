@@ -96,6 +96,6 @@ base.
  That way, _putchar only needs to call write one time, passing to it the whole buffer and the number of bytes in it, which is given by the value of the increamenting variable.
  .sp
  .SH BUGS
- _printf does not take care of length and precision modifiers yet.
+ No known bugs
  .SH AUTHORS
  Nandweza Allan and Chigozirim Igweamaka, cohort 4.
